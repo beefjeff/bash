@@ -1,7 +1,7 @@
 
-if [[ -f ~/bash/.bash_functions ]]; then
-	. ~/bash/.bash_functions
-fi
+# if [[ -f ~/bash/.bash_functions ]]; then
+	# . ~/bash/.bash_functions
+# fi
 
 ### common aliases ###
 
