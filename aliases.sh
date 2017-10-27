@@ -1,4 +1,5 @@
-
+#!/bin/bash
+# Author: Ethan Brace
 ### common aliases ###
 
 alias s='sudo'
@@ -7,7 +8,6 @@ alias sn='sudo nano'
 alias mysql='mysql -p'
 alias ls='clear; ls -la --color'
 alias cl='clear'
-alias aliases='n ~/.bash_aliases'
 alias aa='add-alias'
 alias ra='remove-alias'
 alias rebash='gnome-terminal; exit;'
@@ -28,7 +28,6 @@ alias gaa='git add .'
 
 alias lara-setup='cp .env.example .env; php artisan key:generate'
 alias tinker='php artisan tinker'
-alias part='php artisan'
 
 ### phpstorm ###
 
@@ -37,4 +36,11 @@ alias pstorm-help='composer require --dev barryvdh/laravel-ide-helper;composer r
 
 
 ### added from terminal with add-alias() ###
-alias art='part'
+alias python='python3'
+alias d-bwc='cd /home/ethanabrace/PhpstormProjects/bracewindows.com'
+alias d-thebrace='cd ~/PhpstormProjects/thebrace.net'
+alias phpunit='clear && vendor/bin/phpunit'
+alias sv='sudo vim'
+alias test='hello'
+alias sag='sudo apt-get update'
+alias aliases='n ~/.bash_aliases'

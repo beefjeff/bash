@@ -1,6 +1,5 @@
 export PATH=$PATH:$HOME/.config/composer/vendor/bin:/opt/atom-1.20.0-amd64:/opt/:/opt/sqlite
 
-
 DIR='di=34';  # directory
 FILE='fi=0';  # file
 SYM='ln=94';  # symbolic link
@@ -53,5 +52,5 @@ export LS_COLORS=$DIR:$FILE:$SYM:$FIFO:$SOCK:$BLOCK:$CHAR:$ORPH:$MI:$EXE #:*.rpm
 # 105 = light purple background
 # 106 = turquoise background
 #
-# These can even be combined, so that a parameter like:
+# These can be combined
 # di=5;31;42
