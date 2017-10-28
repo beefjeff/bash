@@ -10,7 +10,6 @@ alias ls='clear; ls -la --color'
 alias cl='clear'
 alias aa='add-alias'
 alias ra='remove-alias'
-alias rebash='gnome-terminal; exit;'
 
 ### composer ###
 
@@ -41,6 +40,7 @@ alias d-bwc='cd /home/ethanabrace/PhpstormProjects/bracewindows.com'
 alias d-thebrace='cd ~/PhpstormProjects/thebrace.net'
 alias phpunit='clear && vendor/bin/phpunit'
 alias sv='sudo vim'
-alias test='hello'
+alias test='echo hello world'
 alias sag='sudo apt-get update'
 alias aliases='n ~/.bash_aliases'
+alias clear-vim-swap='rm ~/.vim/swap/**'
