@@ -180,11 +180,11 @@ git-done(){
 			res=$(git push -f 2>&1)
 
 			if [[ $? -ne 0 ]]; then
-				echo 'still failing.. something is wrong..'
+				echo 'still failing.. something is wrong..'; return;
 			fi
+			echo 'great.  worked that time.'
 		fi
 
-		return
 	fi
 
 	echo 'pushed to origin'; echo;
