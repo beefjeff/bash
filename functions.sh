@@ -50,8 +50,6 @@ add-alias(){
 
 		if echo "$yn" | grep -iq "^y" ;then
 			change-alias $ALIAS_NAME
-		else
-			echo No
 		fi
 
 		return;
@@ -172,14 +170,26 @@ prompt(){ # prompt-text variable-name
 git-done(){
 	
 	if [ -z $1 ]; then prompt "Commit Message:" COMMIT_MESSAGE; else COMMIT_MESSAGE=$1; fi
-	
+
 
 	git commit -m "$COMMIT_MESSAGE" -a
 	echo 'added everything and committed'; echo;
+		
+	res=$(git push 2>&1)
+	
+	if [[ $? -ne 0 ]]; then
+		echo 'looks like push failed'
+		prompt 'use -f?' yn
+		if echo "$yn" | grep -iq "^y" ;then
+			res=$(git push -f 2>&1)
 
-	git push
-	echo $?
-	echo 'pushed'; echo;
+			if [[ $? -ne 0 ]]; then
+				echo 'still failing.. something is wrong..'
+			fi
+		fi
+	fi
+
+	echo 'pushed to origin'; echo;
 }
 alias done='git-done'
 
