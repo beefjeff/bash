@@ -165,15 +165,23 @@ prompt(){ # prompt-text variable-name
 }
 git-done(){
 	
-	if [ -z $1 ]; then prompt "Commit Message:" COMMIT_MESSAGE; else COMMIT_MESSAGE=$1; fi
+	if [ -z $1 ]; then prompt "Commit Message[blank to ammend]:" COMMIT_MESSAGE;  fi
 
+	if [ -z $COMMIT_MESSAGE ];then
+		git commit --amend -a
+	else
 
-	git commit -m "$COMMIT_MESSAGE" -a
+		git commit -m "$COMMIT_MESSAGE" -a
+	fi
 	echo 'added everything and committed'; echo;
 		
 	res=$(git push 2>&1)
 	
 	if [[ $? -ne 0 ]]; then
+		echo 
+		echo $res
+		echo
+
 		echo 'looks like push failed'
 		prompt 'use -f?' yn
 		if echo "$yn" | grep -iq "^y" ;then
