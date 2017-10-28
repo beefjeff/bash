@@ -169,7 +169,23 @@ prompt(){ # prompt-text variable-name
 
 
 }
+git-done(){
+	
+	if [ -z $1 ]; then prompt "Commit Message['a' to ammend]:" COMMIT_MESSAGE; else COMMIT_MESSAGE=$1; fi
+	
+	git add .
+	echo 'added everything..'; echo;
+	if [[ $COMMIT_MESSAGE == 'a' ]];then
+		git commit --amend
+	else
+		git commit -m "$COMMIT_MESSAGE"
+	fi
 
+	echo 'committed'; echo;
+
+	git push
+	echo 'pushed'; echo;
+}
 
 
 
