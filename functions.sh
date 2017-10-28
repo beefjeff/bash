@@ -187,6 +187,8 @@ git-done(){
 				echo 'still failing.. something is wrong..'
 			fi
 		fi
+
+		return
 	fi
 
 	echo 'pushed to origin'; echo;
