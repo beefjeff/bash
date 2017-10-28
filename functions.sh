@@ -5,21 +5,13 @@
 FILE_ALIASES=~/bash/aliases.sh
 
 
-has-arg(){
-	for var in "$@"
-	do
-
-		if eval $var ;then echo yes; fi
-	done
-}
 
 remove-alias(){
-ALIAS_NAME=$1
 	if [ -z $1 ]; then prompt 'What alias would you like to delete?:' ALIAS_NAME;	fi
 
 
 	if ((!$(alias-exists $ALIAS_NAME))); then
-		echo "'$ALIAS_NAME' alias not found"; 
+		echo "'$ALIAS_NAME' not found"; 
 		return;
 	fi
 
@@ -126,16 +118,20 @@ alias ca='change-alias';
 # search aliases.sh for a name of an alias
 # return 0 if not found
 alias-exists(){
-	ALIAS_NAME=$1
-	if [[ -z $1 ]]; then prompt 'what alias are you looking for?' ALIAS_NAME; fi
+	
+	if [ -z $1 ]; then prompt 'what alias are you looking for?' ALIAS_NAME; else  ALIAS_NAME=$1; fi
 
 	echo ${#$(grep "alias $ALIAS_NAME='*'" $FILE_ALIASES)}
+
 }
 
 
 reload(){
 	. ~/bash/.bash_includes;
 }
+
+
+
 
 prompt(){ # prompt-text variable-name
 	# check bash type
@@ -195,8 +191,4 @@ git-done(){
 }
 alias done='git-done'
 
-
-testing(){
-	echo 'testing'
-}
 
