@@ -19,7 +19,5 @@ Deletes an alias
 ### change-alias()
 Allows you to rename or change the command of an alias.\
 It will replace the existing line in aliases.sh with a new line.
----
-## aliases
 
 
