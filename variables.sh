@@ -1,56 +1,52 @@
-export PATH=$PATH:$HOME/.config/composer/vendor/bin:/opt/atom-1.20.0-amd64:/opt/:/opt/sqlite
-
-DIR='di=34';  # directory
-FILE='fi=0';  # file
-SYM='ln=94';  # symbolic link
-FIFO='pi=5';  # fifo file
-SOCK='so=5';  # socket file
-BLOCK='bd=5'; # block (buffered) special file
-CHAR='cd=5';  # character (unbuffered) special file
-ORPH='or=31'; # symbolic link pointing to a non-existent file (orphan)
-MI='mi=0';    # non-existent file pointed to by a symbolic link (visible when you type ls -l)
-EXE='ex=32';  # file which is executable (ie. has 'x' set in permissions).
-export LS_COLORS=$DIR:$FILE:$SYM:$FIFO:$SOCK:$BLOCK:$CHAR:$ORPH:$MI:$EXE #:*.rpm=90
+# colors for echo output
 
 ### decoration
-# 0   = default colour
-# 1   = bold
-# 4   = underlined
-# 5   = flashing text
-# 7   = reverse field
+DEC_DEFUALT='0'
+DEC_BOLD='1';
+DEC_UNDERLINED='4'
+DEC_FLASHING='5'
+DEC_REVERSE='7'
 
-### colors
-# 31  = red
-# 32  = green
-# 33  = orange
-# 34  = blue
-# 35  = purple
-# 36  = cyan
-# 37  = grey
-# 90  = dark grey
-# 91  = light red
-# 92  = light green
-# 93  = yellow
-# 94  = light blue
-# 95  = light purple
-# 96  = turquoise
+### foreground colors
+DEFAULT=38
+BLACK=30
+RED=31
+GREEN=32
+ORANGE=33
+BLUE=34
+PURPLE=35
+CYAN=36
+GREY=37
+GRAY=37
+LGRAY=37
+LGREY=37
+DGREY=90
+DGRAY=90
+LRED=91
+LGREEN=92
+YELLOW=93
+LBLUE=94
+LPURPLE=95
+TURQUOISE=96
+WHITE=97
 
 ### background colors
-# 40  = black background
-# 41  = red background
-# 42  = green background
-# 43  = orange background
-# 44  = blue background
-# 45  = purple background
-# 46  = cyan background
-# 47  = grey background
-# 100 = dark grey background
-# 101 = light red background
-# 102 = light green background
-# 103 = yellow background
-# 104 = light blue background
-# 105 = light purple background
-# 106 = turquoise background
-#
-# These can be combined
-# di=5;31;42
+BG_DEFAULT=49
+BG_BLACK=40
+BG_RED=41
+BG_GREEN=42
+BG_ORANGE=43
+BG_BLUE=44
+BG_PURPLE=45
+BG_CYAN=46
+BG_GREY=47
+BG_DGREY=100
+BG_LRED=101
+BG_LGREEN=102
+BG_YELLOW=103
+BG_LBLUE=104
+BG_LPURPLE=105
+BG_TURQUOISE=106
+BG_WHITE=107
+
+
