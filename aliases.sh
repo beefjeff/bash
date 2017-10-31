@@ -47,3 +47,6 @@ alias lara-reset='php artisan migrate:refresh && php artisan db:seed'
 alias q='exit'
 alias lara-keygen='php artisan key:generate'
 alias ping='ping -c 3'
+<<<<<<< HEAD
+=======
+>>>>>>> c6e57171d9593fa97150e5b4935963e97434764c
