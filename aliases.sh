@@ -47,9 +47,6 @@ alias lara-reset='php artisan migrate:refresh && php artisan db:seed'
 alias q='exit'
 alias lara-keygen='php artisan key:generate'
 alias ping='ping -c 3'
-<<<<<<< HEAD
 alias suweb='sudo -u www-data'
-=======
 alias arti='php artisan'
 alias d-softball='cd ~/PhpstormProjects/softball'
->>>>>>> f86e63ac2ce6919b1eeed2e96a454e81b7fb4618
