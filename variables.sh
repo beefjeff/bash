@@ -1,3 +1,5 @@
+# external IP
+EXTIP="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 # colors for echo output
 
 ### decoration

@@ -1,5 +1,6 @@
 
-export PATH=$PATH:$HOME/.config/composer/vendor/bin:/opt/atom-1.20.0-amd64:/opt/:/opt/sqlite
+export PATH=$PATH:$HOME/.config/composer/vendor/bin:/opt/atom-1.20.0-amd64:/opt/:/opt/sqlite:$HOME/Github_Clones/envoy
+
 
 DIR='di=34';  # directory
 FILE='fi=0';  # file
