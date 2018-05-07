@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. ~/bash/exports.sh
+. ~/bash/variables.sh
+. ~/bash/functions.sh
+. ~/bash/aliases.sh
