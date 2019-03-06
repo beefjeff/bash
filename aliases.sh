@@ -64,8 +64,6 @@ alias d-cdc='cd /mnt/c/users/ethan/Code/cdc'
 alias rsync='rsync --exclude-from "/mnt/c/Users/ethanabrace/rsync-exclude"'
 alias d-braceyourself.solutions='cd /mnt/c/users/ethan/Code/braceyourself.solutions'
 alias v-component='php artisan vueg:component'
-alias ssh-cdc='ssh ethanadmin@user.completedentalconnection.com'
-alias scp-cdc='scp ethanadmin@user.completedentalconnection.com'
 alias npm='/usr/bin/npm'
 alias serve='php artisan serve'
 
