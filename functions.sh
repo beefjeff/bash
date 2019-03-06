@@ -258,7 +258,7 @@ prompt(){ # prompt-text variable-name
 		fi
 	}
 
-	# show error is user misses an arg
+	# show error if user misses an arg
 	if [ $# -ne 2 ];then
 		echo 'error using prompt - need a prompt and variable to store input';
 		return;
