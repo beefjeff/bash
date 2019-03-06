@@ -1,6 +1,7 @@
 #!/bin/bash
 # Author: Ethan Brace
 ### common aliases ###
+export $(grep -v '^#' .env | xargs)
 
 alias s='sudo'
 alias n='nano'
@@ -35,12 +36,10 @@ alias pstorm-help='composer require --dev barryvdh/laravel-ide-helper;composer r
 
 ### added from terminal with add-alias() ###
 alias python='python3'
-alias d-ethan.braceyourself='cd /mnt/c/users/ethan/Code/ethan.braceyourself.solutions'
-alias d-leagueasy='cd ~/Code/leagueasy.braceyourself.solutions'
 alias phpunit='clear && vendor/bin/phpunit'
 alias sv='sudo vim'
 alias sag='sudo apt-get'
-alias aliases='n ~/.bash_aliases'
+alias aliases='vim ~/.bash_aliases'
 alias clear-vim-swap='rm ~/.vim/swap/**'
 alias art='php artisan'
 alias lara-remigrate='php artisan migrate:refresh && php artisan db:seed'
@@ -56,19 +55,16 @@ alias envoy='~/.composer/vendor/bin/envoy'
 alias deploy='gaa && gs && prompt "Commit Message: " message && gc $message && git push && ~/.composer/vendor/bin/envoy run deploy'
 alias lara-push-to-production='npm run production; git push; envoy run deploy; npm run dev;'
 alias lara-log-watch='tail -f storage/logs/laravel.log'
-alias d-windows.braceyourself='cd /mnt/c/users/ethan/Code/windows.braceyourself.solutions'
 alias extip='echo $EXTIP'
 alias cmd='/mnt/c/Windows/System32/cmd.exe /c'
 alias psh='/mnt/c/Windows/System32/cmd.exe /c powershell -command "$@"'
-alias d-cdc='cd /mnt/c/users/ethan/Code/cdc'
-alias rsync='rsync --exclude-from "/mnt/c/Users/ethanabrace/rsync-exclude"'
-alias d-braceyourself.solutions='cd /mnt/c/users/ethan/Code/braceyourself.solutions'
+alias d-cdc='cd $WSL_HOME/Code/cdc'
+alias rsync='rsync --exclude-from "$WSL_HOME/rsync-exclude"'
+alias d-braceyourself.solutions='cd $WSL_HOME/Code/braceyourself.solutions'
 alias v-component='php artisan vueg:component'
-alias ssh-cdc='ssh ethanadmin@user.completedentalconnection.com'
-alias scp-cdc='scp ethanadmin@user.completedentalconnection.com'
 alias npm='/usr/bin/npm'
 alias serve='php artisan serve'
 
-alias server='ssh ethanadmin@192.168.0.4
-'
 alias config='/usr/bin/git --git-dir=/var/git/.cfg.git --work-tree=$HOME'
+
+unset $(grep -v '^#' .env | sed -E 's/(.*)=.*/\1/' | xargs)

@@ -1,0 +1,3 @@
+. ./aliases.sh
+. ./private-alias.sh
+. ./functions.sh

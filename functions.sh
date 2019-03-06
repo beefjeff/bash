@@ -3,6 +3,8 @@
 
 
 FILE_ALIASES=~/bash/aliases.sh
+PRIVATE_ALIASES=~/bash/private-alias.sh
+
 test(){
 		echo 'test'
 }
@@ -165,8 +167,24 @@ add-alias(){
 
 	prompt 'Enter the command:' ALIAS_BODY
 
-	echo "alias $ALIAS_NAME='$ALIAS_BODY'" >> $FILE_ALIASES;
+	prompt 'Is this private? [y/n] (wont be tracked)' PRIVATE_ALIAS
+
+	if echo "$PRIVATE_ALIAS" | grep  -iq "^y" ;then
+		echo "adding to $PRIVATE_ALIASES"
+		echo "alias $ALIAS_NAME='$ALIAS_BODY'" >> $PRIVATE_ALIASES;
+
+
+	else
+		echo "adding to $FILE_ALIASES"
+		echo "alias $ALIAS_NAME='$ALIAS_BODY'" >> $FILE_ALIASES;
+	fi
+
+
+
+
+	echo "Alias added. Sourcing files..."
 	reload
+	echo "Done."
 }
 
 

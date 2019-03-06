@@ -1,4 +1,6 @@
+.env
 *.save
 .idea/
 tags
 test.sh
+private-alias.sh
