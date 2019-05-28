@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author: Ethan Brace
 ### common aliases ###
-export $(grep -v '^#' .env | xargs)
+#export $(grep -v '^#' .env | xargs)
 
 alias s='sudo'
 alias n='nano'
@@ -67,4 +67,4 @@ alias serve='php artisan serve'
 
 alias config='/usr/bin/git --git-dir=/var/git/.cfg.git --work-tree=$HOME'
 
-unset $(grep -v '^#' .env | sed -E 's/(.*)=.*/\1/' | xargs)
+alias g--='git checkout --'

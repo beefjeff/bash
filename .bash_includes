@@ -1,5 +1,15 @@
 #!/bin/bash
+DIR=/home/eab/bash
 
-. ~/bash/aliases.sh
-. ~/bash/private-alias.sh
-. ~/bash/functions.sh
+FILES=("$DIR/aliases.sh" "$DIR/private-alias.sh" "$DIR/functions.sh")
+
+
+for f in $FILES[@]; do 
+	if [[ ! -f $f ]]; then
+		touch $f
+	fi
+	source $f
+done
+
+
+

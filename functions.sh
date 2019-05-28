@@ -146,11 +146,7 @@ alias rma='remove-alias';
 
 
 add-alias(){
-	if [[ $1 ]]; then
-		ALIAS_NAME=$1
-	else
-		prompt 'What would you like to call the alias?' ALIAS_NAME	
-	fi
+	prompt 'What would you like to call the alias?' ALIAS_NAME	
 
 	SEARCH_FOR_MATCHING=$(grep "alias $ALIAS_NAME='*'" $FILE_ALIASES);
 	if [[ ${#SEARCH_FOR_MATCHING}  -gt 0 ]];then
@@ -167,7 +163,7 @@ add-alias(){
 
 	prompt 'Enter the command:' ALIAS_BODY
 
-	prompt 'Is this private? [y/n] (wont be tracked)' PRIVATE_ALIAS
+	prompt 'Is this private? [y/n] (wont be tracked w/git)' PRIVATE_ALIAS
 
 	if echo "$PRIVATE_ALIAS" | grep  -iq "^y" ;then
 		echo "adding to $PRIVATE_ALIASES"
@@ -193,11 +189,7 @@ alias aa='add-alias';
 
 
 change-alias(){
-	if [[ $1 ]]; then
-		ALIAS_NAME=$1
-	else
-		prompt 'Which alias?:' ALIAS_NAME
-	fi
+	prompt 'Which alias?:' ALIAS_NAME
 
 
 	old_name=$ALIAS_NAME;
