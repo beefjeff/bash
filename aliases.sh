@@ -68,3 +68,4 @@ alias serve='php artisan serve'
 alias config='/usr/bin/git --git-dir=/var/git/.cfg.git --work-tree=$HOME'
 
 alias g--='git checkout --'
+alias popular-commands='awk \"{print $1 \" \" $2}\" ~/.zsh_history | sort | uniq -c | sort -nr | head -n 10'
