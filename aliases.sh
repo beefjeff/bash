@@ -68,3 +68,4 @@ alias serve='php artisan serve'
 alias config='/usr/bin/git --git-dir=/var/git/.cfg.git --work-tree=$HOME'
 
 alias g--='git checkout --'
+alias tail='tail -f -n 100'
