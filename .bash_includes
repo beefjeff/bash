@@ -1,5 +1,17 @@
 #!/bin/bash
 
-. ~/bash/aliases.sh
-. ~/bash/private-alias.sh
-. ~/bash/functions.sh
+DIR="/home/$USERNAME/bash"
+
+FILES=("aliases.sh" "functions.sh" "private-alias.sh")
+
+
+for f in $FILES[@]; do 
+	f="$DIR/$f"
+	if [[ ! -f $f ]]; then
+		touch $f
+	fi
+	source $f
+done
+
+
+

@@ -68,10 +68,8 @@ alias v-component='php artisan vueg:component'
 alias npm='/usr/bin/npm'
 alias serve='php artisan serve'
 
-alias server='ssh ethanadmin@192.168.0.4'
-alias d-pwa='cd /mnt/c/Users/ethan/code/udemy/pwa_course'
 alias screens='screen -ls'
-alias 'droplets.drw'='157.230.214.88'
-alias d-api='cd /home/ethan/Code/api.braceyourself.solutions'
-alias d-plugins='cd ~/Code/plugins'
+
+
 alias g--='git checkout --'
+alias tail='tail -f -n 100'
