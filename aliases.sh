@@ -70,6 +70,4 @@ alias serve='php artisan serve'
 
 alias screens='screen -ls'
 
-
 alias g--='git checkout --'
-alias tail='tail -f -n 100'
