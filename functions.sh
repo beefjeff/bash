@@ -3,6 +3,7 @@
 
 
 FILE_ALIASES=~/bash/aliases.sh
+PRIVATE_ALIASES=~/bash/private-alias.sh
 
 
 drw(){
@@ -260,6 +261,7 @@ add-alias(){
 
 
 	else
+
 		echo "adding to $FILE_ALIASES"
 		echo "alias $ALIAS_NAME='$ALIAS_BODY'" >> $FILE_ALIASES;
 	fi
