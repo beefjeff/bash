@@ -1,11 +1,11 @@
 #!/bin/bash
 
-DIR="/home/$USERNAME/bash"
+DIR="$HOME/bash"
 
 FILES=("aliases.sh" "functions.sh" "private-alias.sh")
 
 
-for f in $FILES[@]; do 
+for f in "${FILES[@]}"; do 
 	f="$DIR/$f"
 	if [[ ! -f $f ]]; then
 		touch $f
