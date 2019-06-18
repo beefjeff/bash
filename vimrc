@@ -7,6 +7,9 @@ noremap <leader>so :source ~/.ideavimrc<cr>
 inoremap <leader>s <esc>:w<cr>
 nnoremap <leader>s :w
 
+command! -nargs=0 Sw w !sudo tee % > /dev/null && l enter
+command! -nargs=0 Swq w !sudo tee % > /dev/null && l enter && q
+
 " ============================================================================
 " " Movement
 " "
@@ -133,3 +136,7 @@ noremap <CR> :
 " "
 " "
 " "
+
+if &diff
+	colorscheme desert
+endif

@@ -68,3 +68,11 @@ alias serve='php artisan serve'
 alias screens='screen -ls'
 
 alias g--='git checkout --'
+
+
+# Supervisor Helpers
+alias superv-enable-horizon='sudo mv /etc/supervisord.d/horizon.ini.disabled /etc/supervisord.d/horizon.ini && sudo systemctl restart supervisord.service && sudo systemctl status supervisord.service'
+alias superv-disable-horizon='sudo mv /etc/supervisord.d/horizon.ini /etc/supervisord.d/horizon.ini.disabled && sudo systemctl restart supervisord.service && sudo systemctl status supervisord.service'
+alias superv-disable-queue-worker='sudo mv /etc/supervisord.d/worker-queue.ini /etc/supervisord.d/worker-queue.ini.disabled && sudo systemctl restart supervisord.service && sudo systemctl status supervisord.service'
+alias superv-enable-queue-worker='sudo mv /etc/supervisord.d/worker-queue.ini.disabled /etc/supervisord.d/worker-queue.ini && sudo systemctl restart supervisord.service && sudo systemctl status supervisord.service'
+alias :q='exit'
