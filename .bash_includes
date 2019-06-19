@@ -13,5 +13,6 @@ for f in "${FILES[@]}"; do
 	source $f
 done
 
+source "$DIR/.prompt"
 
 
