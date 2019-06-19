@@ -14,5 +14,6 @@ for f in "${FILES[@]}"; do
 done
 
 source "$DIR/.prompt"
+source "$DIR/.login-message"
 
 
