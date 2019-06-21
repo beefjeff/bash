@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo $HOSTNAME;
+echo "$USERNAME@$HOSTNAME";

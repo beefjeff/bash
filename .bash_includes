@@ -16,4 +16,5 @@ done
 source "$DIR/.prompt"
 source "$DIR/.login-message"
 
+source $DIR/update-self.sh;
 
