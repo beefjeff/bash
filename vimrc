@@ -1,7 +1,7 @@
 let mapleader = ","
 " set gdefault
-" set ignorecase
 " source this file
+set smartcase
 set clipboard+=unnamed
 noremap <leader>so :source ~/.ideavimrc<cr>
 inoremap <leader>s <esc>:w<cr>
