@@ -1,4 +1,5 @@
 #!/bin/sh
+current_dir=$(pwd)
 
 cd $HOME/bash;
 
@@ -13,4 +14,4 @@ if [ $(git rev-parse HEAD) != $(git rev-parse @{u}) ]; then
 
 fi
 
-cd $HOME
+cd $current_dir

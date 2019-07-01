@@ -122,6 +122,7 @@ nnoremap <silent> <C-h> :noh<cr>
 " "
 " "
 " "
+nnoremap <F9> :!%:p<enter>
 
 if &diff
 	colorscheme desert
