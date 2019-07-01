@@ -6,6 +6,13 @@ FILE_ALIASES=~/bash/aliases.sh
 PRIVATE_ALIASES=~/bash/private-alias.sh
 
 
+arti(){
+	./artisan $@
+}
+artisan(){
+	./artisan $@
+}
+	
 drw(){
 
 	cd /mnt/c/users/ethan/Code/drwindows;
@@ -97,6 +104,10 @@ nova(){
 
 horizon(){
 	php artisan horizon:$@
+}
+
+voyager(){
+	arti voyager:$@
 }
 
 say() {
