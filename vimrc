@@ -1,25 +1,25 @@
 let mapleader = ","
 " set gdefault
 " source this file
+
+set ignorecase
 set smartcase
 set clipboard+=unnamed
-noremap <leader>so :source ~/.ideavimrc<cr>
 inoremap <leader>s <esc>:w<cr>
 nnoremap <leader>s :w
 
+
+" :Sw -> save a file with sudo privs
 command! -nargs=0 Sw w !sudo tee % > /dev/null
 command! -nargs=0 Swq w !sudo tee % > /dev/null && l <cr> && q
+
 
 " ============================================================================
 " " Movement
 " "
 " ============================================================================
-"
-" " Scroll screen with the cursor
-" noremap <C-j> gj<C-e>
-" noremap <C-k> gk<C-y>
-"
-"" up / down
+
+
 noremap j k
 noremap k j
 noremap l l
@@ -27,25 +27,7 @@ noremap h h
 noremap L $
 noremap H ^
 
-" Insert mode
-" inoremap <C-k> <Up>
-" inoremap <C-j> <Down>
-" inoremap <C-l> <Right>
-" inoremap <C-h> <Left>
-"
-" " Previous / next match
-" noremap H ,
-" noremap L ;
-"
-"" Home row beginning / end of line
-" noremap h ^
-" noremap l $
 
-" Previous / next word
-" noremap k #
-" noremap j *
-"
-" "
 " ============================================================================
 " " Editing
 " "
@@ -59,9 +41,11 @@ vnoremap <C-q> <Esc>
 vnoremap <space>, <Esc>
 cmap <C-q> <C-c>
 
+
 " Moving blocks of text in visual mode
 vnoremap < <gv
 vnoremap > >gv
+
 "" Moving blocks of text in normal mode
 " noremap > V > <esc>
 " noremap < V < <esc>
@@ -78,6 +62,7 @@ vnoremap <c-J> :m '<-2<CR>gv=gv
 
 " " Select all text
 map <leader>a ggVG
+
 "
 "" Copy until the end of the line
 " noremap Y y$
