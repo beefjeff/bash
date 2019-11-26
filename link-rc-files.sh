@@ -6,7 +6,7 @@ remove(){
 }
 
 link(){
-	ln -s $1 $2
+	ln -sf $1 $2
 }
 
 
@@ -18,16 +18,17 @@ for f in "${rc_files[@]}"; do
 		echo "$HOME/."${fileSplit[0]}"rc" || 
 		echo "$HOME/."${fileSplit[1]}"rc"`
 
+	echo "$symlinkName"
 
 	
 
-	if [[ ! -f "$HOME/.$f" ]]; then
-		#echo removing $symlinkName
-		remove $symlinkName
-	fi
+#	if [[ ! -f "$HOME/$symlinkName" ]]; then
+#		echo removing $symlinkName
+#		remove $symlinkName
+#	fi
 
 	if [[ ! -f "$symlinkName" ]]; then
-		#echo "linking $fileName -> $symlinkName"
+		echo "linking $fileName -> $symlinkName"
 		link $fileName $symlinkName
 	fi
 
