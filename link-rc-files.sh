@@ -6,7 +6,7 @@ remove(){
 }
 
 link(){
-	ln -sf $1 $2
+	ln -s -f $1 $2
 }
 
 
@@ -22,15 +22,8 @@ for f in "${rc_files[@]}"; do
 
 	
 
-#	if [[ ! -f "$HOME/$symlinkName" ]]; then
-#		echo removing $symlinkName
-#		remove $symlinkName
-#	fi
+	echo "linking $fileName -> $symlinkName"
+	link $fileName $symlinkName
 
-	if [[ ! -f "$symlinkName" ]]; then
-		echo "linking $fileName -> $symlinkName"
-		link $fileName $symlinkName
-	fi
 
 done
-
