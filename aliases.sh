@@ -5,7 +5,7 @@
 alias s='sudo'
 alias n='nano'
 alias sn='sudo nano'
-alias ls='clear; ls -la --color --group-directories-first'
+alias ls='clear; ll --color --group-directories-first'
 alias cl='clear'
 alias aa='add-alias'
 
