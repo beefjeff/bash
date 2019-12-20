@@ -5,6 +5,9 @@ let mapleader = ","
 set ignorecase
 set smartcase
 set clipboard=unnamedplus
+set tabstop=4
+set shiftwidth=4
+
 inoremap <leader>s <esc>:w<cr>
 nnoremap <leader>s :w
 
