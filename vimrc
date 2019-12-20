@@ -7,9 +7,11 @@ set smartcase
 set clipboard=unnamedplus
 set tabstop=4
 set shiftwidth=4
+set autoindent
 
 inoremap <leader>s <esc>:w<cr>
 nnoremap <leader>s :w
+filetype plugin indent on
 
 
 " :Sw -> save a file with sudo privs
@@ -35,7 +37,35 @@ noremap H ^
 " " Editing
 " "
 " ============================================================================
-"
+
+"" auto close characters
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+"auto close {
+function! s:CloseBracket()
+    let line = getline('.')
+    if line =~# '^\s*\(struct\|class\|enum\) '
+        return "{\<Enter>};\<Esc>O"
+    elseif searchpair('(', '', ')', 'bmn', '', line('.'))
+        " Probably inside a function call. Close it off.
+        return "{\<Enter>});\<Esc>O"
+    else
+        return "{\<Enter>}\<Esc>O"
+    endif
+endfunction
+inoremap <expr> {<Enter> <SID>CloseBracket()
+
+
+"" Yaml
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 "" Escape
 inoremap <space>, <Esc>`^
 inoremap <C-q> <Esc>`^
