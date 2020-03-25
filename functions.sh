@@ -5,7 +5,7 @@ FILE_ALIASES=~/bash/aliases.sh
 PRIVATE_ALIASES=~/bash/private-alias.sh
 
 
-for file in ./functions.d/*.sh source; do source $file; done
+for file in $(dirname $0)/functions.d/*.sh ; do source $file; done
 
 
 alias rma='remove_alias';

@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/bash/functions.sh
+source "$(dirname $0)/functions.sh"
 
 filetype=jpg
 DIR=$(pwd)

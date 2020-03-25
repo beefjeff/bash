@@ -1,20 +1,21 @@
 #!/bin/bash
 
 DIR="$HOME/bash"
+FILES=("aliases.sh" "functions.sh" "private-alias.sh");
 
-FILES=("aliases.sh" "functions.sh" "private-alias.sh")
+for f in "${FILES[@]}"; do
 
+	f="$DIR/$f";
 
-for f in "${FILES[@]}"; do 
-	f="$DIR/$f"
 	if [[ ! -f $f ]]; then
-		touch $f
+		touch $f;
 	fi
-	source $f
+
+	source "$f";
+
 done
 
-source "$DIR/.prompt"
-source "$DIR/.login-message"
-
-source $DIR/update-self.sh;
-
+#source "$DIR/.prompt"
+#source "$DIR/.login-message"
+#source $DIR/update-self.sh;
+#
