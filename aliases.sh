@@ -3,7 +3,7 @@
 ### common aliases ###
 
 alias s='sudo'
-alias ls='clear; ll -a --color --group-directories-first'
+alias ls='clear; ll -a --color --group-directories-first --time-style=+"%Y-%m-%d %H:%M:%S"'
 alias cl='clear'
 alias aa='add-alias'
 

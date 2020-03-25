@@ -1,0 +1,3 @@
+nova(){
+	php artisan nova:$@
+}

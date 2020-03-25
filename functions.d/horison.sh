@@ -1,0 +1,3 @@
+horizon(){
+	php artisan horizon:$@
+}
