@@ -5,6 +5,9 @@
 FILE_ALIASES=~/bash/aliases.sh
 PRIVATE_ALIASES=~/bash/private-alias.sh
 
+october(){
+	artisan october:$@
+}
 
 arti(){
 	./artisan $@
