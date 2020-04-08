@@ -1,7 +1,10 @@
 # external IP
 EXTIP="$(dig +short myip.opendns.com @resolver1.opendns.com)"
-# colors for echo output
 
+
+
+
+# colors for echo output
 ### decoration
 DEC_DEFUALT='0'
 DEC_BOLD='1';
