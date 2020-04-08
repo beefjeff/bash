@@ -4,10 +4,6 @@
 FILE_ALIASES=~/bash/aliases.sh
 PRIVATE_ALIASES=~/bash/private-alias.sh
 
-october(){
-	artisan october:$@
-}
-
 for file in $(dirname $0)/functions.d/*.sh ; do source $file; done
 
 
