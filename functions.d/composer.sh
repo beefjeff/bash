@@ -1,5 +1,5 @@
-composer(){
-	composer=$(readVar "COMPOSER")
-
-	echo $composer;
-}
+#composer(){
+#	composer=$(readVar "COMPOSER")
+#
+#	echo $composer;
+#}

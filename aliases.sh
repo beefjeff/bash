@@ -73,3 +73,6 @@ alias dockerup='docker-compose up -d'
 alias dockerdown='docker-compose down'
 alias dc='docker-compose'
 alias gamend='git commit --amend'
+alias ipa='ip a'
+alias ipconfig='ip a'
+alias captive-portal-login="xdg-open http://$(ip route get 8.8.8.8 | awk '{print $3}')"

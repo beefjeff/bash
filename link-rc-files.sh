@@ -1,5 +1,5 @@
 #!/bin/bash
-rc_files=(vim vim-ideavim zsh)
+rc_files=(vim ideavim zsh)
 
 remove(){
 	rm $1
