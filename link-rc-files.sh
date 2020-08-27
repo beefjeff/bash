@@ -9,6 +9,8 @@ link(){
 	ln -s -f $1 $2
 }
 
+echo "linking ssh-config"
+link $HOME/bash/ssh-config $HOME/.ssh/config
 
 for f in "${rc_files[@]}"; do 
 	fileSplit=(${f//-/ })
