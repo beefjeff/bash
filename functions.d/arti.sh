@@ -1,3 +1,3 @@
 arti(){
-	./artisan "$@"
+	php artisan "$@"
 }

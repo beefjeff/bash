@@ -1,3 +1,38 @@
+" ============================================================================
+" " Plugins
+" "
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line 
+"
+" ============================================================================
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
+call vundle#begin() " alternatively, pass a path where Vundle should install plugins ---  call vundle#begin('~/some/path/here')
+	" let Vundle manage Vundle, required
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'valloric/youcompleteme'
+
+	"Plugin 'tpope/vim-fugitive'
+	"Plugin 'git://git.wincent.com/command-t.git'
+	"Plugin 'file:///home/gmarik/path/to/plugin'
+	"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+call vundle#end()            " required
+" ======= End plugin script ============
+
+inoremap <leader>s <esc>:w<cr>
+nnoremap <leader>s :w
+
+filetype plugin indent on    " required
+
+" :Sw -> save a file with sudo privs
+command! -nargs=0 Sw w !sudo tee % > /dev/null
+command! -nargs=0 Swq w !sudo tee % > /dev/null && l <cr> && q
 let mapleader = ","
 " set gdefault
 " source this file
@@ -8,15 +43,6 @@ set clipboard=unnamedplus
 set tabstop=4
 set shiftwidth=4
 set autoindent
-
-inoremap <leader>s <esc>:w<cr>
-nnoremap <leader>s :w
-filetype plugin indent on
-
-
-" :Sw -> save a file with sudo privs
-command! -nargs=0 Sw w !sudo tee % > /dev/null
-command! -nargs=0 Swq w !sudo tee % > /dev/null && l <cr> && q
 
 
 " ============================================================================
@@ -124,7 +150,11 @@ map <leader>a ggVG
 "
 "" Enter the command-line mode
 noremap <CR> :
+"" remove highlighting
 nnoremap <silent> <C-h> :noh<cr>
+
+nnoremap - :Ex<cr>
+
 
 " Reload .ideavimrc
 " nnoremap <Space>vs :source ~/.ideavimrc<CR>

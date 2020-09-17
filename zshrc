@@ -3,7 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 	export ZSH="$HOME/.oh-my-zsh"
-	export PATH=$HOME/.composer/vendor/bin:$PATH
+	export PATH=$HOME/.config/composer/vendor/bin:$PATH
+	#export DOCKER_HOST=tcp://127.0.0.1:2376
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -26,6 +27,7 @@ ZSH_THEME="agnoster"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
+DISABLE_UPDATE_PROMPT=true
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -105,3 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
