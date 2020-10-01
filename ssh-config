@@ -10,7 +10,7 @@ Host apex
 Host 10.2.1.1
 	user eab-admin
 
-Host 10.1.1.1
+Host 10.1.1.1 ezra
 	user eab-admin
 
 Host docker docker01
@@ -95,7 +95,8 @@ Host splcexposed.com
 	user splcexpo
 	IdentityFile ~/.ssh/splcexposed.com.key
 
-Host tower_data_ftp sftp2.towerdata.com towerdata.com
+Host tower_data_ftp towerdata.com
+	hostname sftp2.towerdata.com 
 	user familyresearch
 
 Host braceyourself.solutions as1
@@ -116,3 +117,7 @@ Host syslog syslog01 syslog01.hol.frc.org
 	hostname 10.2.1.10
 	user eab-admin
 
+
+Host ftp.quorum.us
+	IdentityFile ~/.ssh/quorum.key
+	user frc

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Creating Symlinks"
+$HOME/bash/link-rc-files.sh
+
 if [ ! -e ~/.vim/bundle/Vundle.vim ];then
 	echo "Installing Vundle..."
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
