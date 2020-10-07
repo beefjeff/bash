@@ -6,3 +6,4 @@ test.sh
 private-alias.sh
 ideavimrc
 go1.7.3.linux-amd64.tar.gz
+*.tar.gz
