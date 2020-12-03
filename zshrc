@@ -5,6 +5,7 @@
 	export ZSH="$HOME/.oh-my-zsh"
 	export PATH=$HOME/.config/composer/vendor/bin:/usr/local/go/bin:$PATH
     export EDITOR=$(which vim)
+    export COMPOSER_MEMORY_LIMIT=-1
 	#export DOCKER_HOST=tcp://127.0.0.1:2376
     source $HOME/bash/.go-profile
 

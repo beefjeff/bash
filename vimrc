@@ -18,6 +18,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'SirVer/ultisnips'
     Plug 'vim-test/vim-test'
+    Plug 'chrisbra/csv.vim'
+
 
 
     Plug 'ycm-core/YouCompleteMe'
