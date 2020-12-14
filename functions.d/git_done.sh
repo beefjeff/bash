@@ -1,4 +1,4 @@
-. "$(dirname $0)/prompt.sh"
+. "$HOME/bash/functions.d/prompt.sh"
 
 git_done(){
 
