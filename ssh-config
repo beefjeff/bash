@@ -101,11 +101,13 @@ Host tower_data_ftp towerdata.com
 
 Host braceyourself.solutions as1
 	user ethan
+
 Host as1
 	hostname 192.168.0.4
 	user ethan
 
 Host ves
+    user ethan
 	hostname 178.128.148.41
 	IdentityFile ~/.ssh/ethan@ves
 	
