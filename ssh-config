@@ -13,7 +13,7 @@ Host 10.2.1.1
 Host 10.1.1.1 ezra
 	user eab-admin
 
-Host docker docker01
+Host docker docker01 10.2.0.1
 	hostname 10.2.0.1
 	user eab-admin
 

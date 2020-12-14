@@ -2,6 +2,7 @@ composer(){
     if test -f "./vendor/bin/sail"; then
         sail composer $@
     else
-        /usr/bin/compser $@
+        /usr/bin/composer $@
+        
     fi
 }
