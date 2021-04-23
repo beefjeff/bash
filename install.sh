@@ -1,7 +1,17 @@
 #!/bin/bash
 
+echo "installing xbindkeys"
+sudo apt install -y xbindkeys x11-utils xdotool
+xbindkeys
+
+echo " installing zsh"
+sudo apt install zsh
+
+echo "installing oh_my_zsh"
+~/bash/install_ohmyzsh.sh
+
 echo "Creating Symlinks"
-$HOME/bash/link-rc-files.sh
+$HOME/bash/symlink.sh
 
 if [ ! -e ~/.vim/bundle/Vundle.vim ];then
 	echo "Installing Vundle..."
