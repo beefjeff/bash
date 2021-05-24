@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+  artisan:
+    image: artisan
+    build:
+      context: ./
+    restart: unless-stopped
+    volumes:
+      - ~/.config/composer/cache:/tmp/cache

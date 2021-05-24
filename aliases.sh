@@ -22,7 +22,7 @@ alias gaa='git add .'
 ### laravel ###
 
 alias lara-setup='cp .env.example .env; php artisan key:generate'
-alias tinker='php artisan tinker'
+alias tinker='artisan tinker'
 
 ### phpstorm ###
 
@@ -39,7 +39,6 @@ alias clear-vim-swap='rm ~/.vim/swap/**'
 alias lara-remigrate='php artisan migrate:refresh && php artisan db:seed'
 alias q='exit'
 alias lara-keygen='php artisan key:generate'
-alias ping='ping -c 3'
 alias suweb='sudo -u www-data'
 alias mb-info='sudo dmidecode -t 2'
 alias copy-envoy='cp ~/Envoy.blade.php ./'
@@ -75,3 +74,4 @@ alias gamend='git commit --amend'
 alias ipa='ip a'
 alias ipconfig='ip a'
 alias captive-portal-login="xdg-open http://$(ip route get 8.8.8.8 | awk '{print $3}')"
+alias reload-audio='pacmd unload-module module-udev-detect && pacmd load-module module-udev-detect'

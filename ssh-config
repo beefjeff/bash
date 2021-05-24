@@ -3,11 +3,11 @@ Host *
 	ServerAliveCountMax 2
 
 Host apex
-	#ProxyCommand ssh -W %h:%p 10.2.1.1
 	hostname 10.2.1.252
 	user eab-admin
 
-Host 10.2.1.1
+Host malachi 10.2.1.1
+    hostname 10.2.1.1
 	user eab-admin
 
 Host 10.1.1.1 ezra
@@ -33,7 +33,7 @@ Host vcenter
 	hostname 10.2.1.8
 	user infotech
 
-Host streamingmedia
+Host jacob streamingmedia jacob.frc.org
 	hostname 172.20.16.5
 	user eab-admin
 
@@ -43,10 +43,8 @@ Host gitlab gitlab.frc.org
 	user git
 
 Host web1
-	#ProxyCommand ssh -W %h:%p 10.2.1.1
-	hostname 172.20.16.200
+	hostname 172.20.16.127
 	user eab-admin
-	port 2222
 
 
 
@@ -57,9 +55,8 @@ Host ftp ftp.hollanddataprocessing.com 10.2.1.241
 
 # CF7 servers
 Host noah 172.20.16.170
-	#ProxyCommand ssh -W %h:%p 10.2.1.1
 	hostname 172.20.16.170
-	user eab-admin
+    user eab-admin
 
 Host japheth 172.20.16.141
 	hostname 172.20.16.141
@@ -67,12 +64,12 @@ Host japheth 172.20.16.141
 
 # CF2018 servrs
 Host web3
-	#ProxyCommand ssh -W %h:%p 10.2.1.1
+    IdentitiesOnly=yes
 	hostname 172.20.16.126
-	user eab-admin
+    user eab-admin
+    IdentityFile ~/.ssh/httpd@web3
 
 Host web4
-	#ProxyCommand ssh -W %h:%p 10.2.1.1
 	hostname 172.20.16.124
 	user eab-admin
 
@@ -82,6 +79,9 @@ Host db1
 	user eab-admin
 Host db2
 	hostname 10.2.1.14
+	user eab-admin
+Host db3
+	hostname 10.2.1.49
 	user eab-admin
 Host david.frc.org david
 	hostname 10.2.1.7
@@ -99,20 +99,23 @@ Host tower_data_ftp towerdata.com
 	hostname sftp2.towerdata.com 
 	user familyresearch
 
-Host braceyourself.solutions as1
+Host braceyourself.solutions
+	user ethan
+
+Host as2
+	hostname 192.168.0.5
 	user ethan
 
 Host as1
 	hostname 192.168.0.4
 	user ethan
 
-Host ves
+Host ves 178.128.148.41
     user ethan
 	hostname 178.128.148.41
-	IdentityFile ~/.ssh/ethan@ves
+    IdentityFile ~/.ssh/ethan@ves
 	
 Host 172.20.16.4 qmail
-	#ProxyCommand ssh -W %h:%p 10.2.1.1
 	user eab-admin
 
 Host syslog syslog01 syslog01.hol.frc.org
@@ -121,5 +124,21 @@ Host syslog syslog01 syslog01.hol.frc.org
 
 
 Host ftp.quorum.us
-	IdentityFile ~/.ssh/quorum.key
+	IdentityFile ~/.ssh/quorum.new.key
 	user frc
+
+Host mds-ftp ftp.mdscom.com
+    KexAlgorithms diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
+    hostname 72.44.202.146
+    IdentityFile ~/.ssh/mdsftp_id_rsa.key
+    user FRC
+
+Host do-valheim
+    user ethan
+    hostname 167.71.240.134
+
+Host jenkins jenkins.hol.frc.org
+    user eab-admin
+    IdentitiesOnly=yes
+    hostname jenkins.hol.frc.org
+

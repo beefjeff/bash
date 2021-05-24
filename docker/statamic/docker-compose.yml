@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  statamic:
+    image: statamic
+    build:
+      context: ./
+    restart: unless-stopped
+    volumes:
+      - ~/.config/composer/cache:/tmp/cache

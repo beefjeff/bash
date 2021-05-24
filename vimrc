@@ -66,6 +66,7 @@ filetype plugin indent on    " required
         map <silent> <A-j> <C-W>+
         map <silent> <A-l> <C-w>>
 
+    nmap <C-A> :w<CR>:so %<CR>
     execute "set <M-2>=\e2"
     map <M-2> :NERDTreeToggle<CR>
     execute "set <M-1>=\e1"
@@ -149,7 +150,7 @@ filetype plugin indent on    " required
 
 " Commands
     command! -nargs=0 Sw w !sudo tee % > /dev/null
-    command! -nargs=0 Swq w !sudo tee % > /dev/null && l <cr> && q
+    
     "" Yaml
     au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
@@ -192,6 +193,7 @@ filetype plugin indent on    " required
         autocmd! BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw
         autocmd! BufWritePost $MYGVIMRC if has('gui_running') | so % | echom "Reloaded " . $MYGVIMRC | endif | redraw
       augroup END
+
     endif " has autocmd
    
 

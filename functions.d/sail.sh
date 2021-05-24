@@ -1,5 +1,5 @@
-#!/bin/bash
-function sail(){
-    echo 'sail away...'
+sail(){
+
     ./vendor/bin/sail $@
+
 }

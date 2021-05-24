@@ -1,9 +1,9 @@
 php(){
 
     if test -f "./vendor/bin/sail"; then
-        sail php $@
+        ./vendor/bin/sail php $@
     else
-        php $@
+        docker run -it --rm php php $@
     fi
 
 }

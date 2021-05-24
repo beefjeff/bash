@@ -1,0 +1,11 @@
+version: '3.0'
+
+services:
+  composer:
+    container_name: composer
+    build: ./
+    environment:
+      - COMPOSER_AUTH
+    volumes:
+      - ${PWD}:/app
+      - ${HOME}/.config/composer:/tmp
