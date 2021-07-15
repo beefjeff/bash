@@ -46,6 +46,7 @@ RUN set -eux; \
   rm -f /tmp/installer.php; \
   find /tmp -type d -exec chmod -v 1777 {} +
 
+RUN useradd -d /app -u 1000 -m user 
 
 RUN composer global require laravel/installer
 
@@ -54,8 +55,8 @@ ENV PATH=$PATH:/tmp/vendor/bin
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x docker-entrypoint.sh
 
-RUN mkdir /app
 
+USER user
 WORKDIR /app
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
